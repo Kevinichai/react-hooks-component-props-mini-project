@@ -1,17 +1,18 @@
 import React from "react";
 import Article from "./Article";
-
 function ArticleList({posts}){
-    const articleItem=posts.map((post)=>(
-        <Article 
+    const articleItems=posts.map((post)=>(
+        < Article 
         key={post.id}
         title={post.title}
         date={post.date}
         preview={post.preview}
         />
-))
-    return <main>{articleItem}</main>
+    ))
+return (
+    <main>
+{articleItems}
+    </main>
+)
 }
-
-
-export default ArticleList;
+export default ArticleList
